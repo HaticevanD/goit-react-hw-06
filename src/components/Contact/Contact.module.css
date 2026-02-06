@@ -1,0 +1,59 @@
+.card {
+  background: rgba(75, 46, 122, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(200, 180, 255, 0.18);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transition: all 0.22s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.42);
+  border-color: rgba(200, 180, 255, 0.35);
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #f0e8ff;
+  margin-bottom: 4px;
+}
+
+.number {
+  font-size: 0.95rem;
+  color: #c9b8ff;
+  opacity: 0.9;
+}
+
+.deleteButton {
+  background: var(--delete, #ef4444);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.deleteButton:hover {
+  background: var(--delete-hover, #dc2626);
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35); 
+}
+
+.deleteButton:active {
+  transform: translateY(0) scale(0.98);
+}

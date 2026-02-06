@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --primary-light: #a78bfa;
+  --bg-light: #f9f5ff;
+  --card-bg: #ffffff;
+  --text-dark: #1e1b4b;
+  --text-muted: #6b7280;
+  --border: #d1d5ff;
+  --shadow: 0 8px 30px rgba(139, 92, 246, 0.08);
+  --transition: all 0.25s ease;
+}
+
+body {
+  background: linear-gradient(135deg, #f3e8ff 0%, #f9f5ff 100%);
+  color: var(--text-dark);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px 16px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
   text-align: center;
+  letter-spacing: -0.02em;
+
+  background: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    var(--primary-light) 50%,
+    var(--primary-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow:
+    0 2px 4px rgba(139, 92, 246, 0.25),
+    0 4px 12px rgba(124, 58, 237, 0.18);
+
+  position: relative;
+  transition: var(--transition);
+  margin-bottom: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title:hover {
+  transform: translateY(-3px);
+  text-shadow:
+    0 4px 12px rgba(139, 92, 246, 0.4),
+    0 8px 24px rgba(124, 58, 237, 0.3);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
