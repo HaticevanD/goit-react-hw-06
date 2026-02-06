@@ -3,12 +3,11 @@ import * as Yup from "yup";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 
-import { addContact } from "../../redux/contactsSlice"; // yolunu kendi yapına göre kontrol et
-import { selectContacts } from "../../redux/contactsSlice"; // yolunu kontrol et
+import { addContact } from "../../redux/contactsSlice";
+import { selectContacts } from "../../redux/contactsSlice";
 
 import css from "./ContactForm.module.css";
 
-// Validation şeması aynı kalıyor
 const validationSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Too short")
@@ -22,7 +21,7 @@ const validationSchema = Yup.object().shape({
 
 function ContactForm() {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts); // mevcut kişiler listesi
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = (values, { resetForm }) => {
     const trimmedName = values.name.trim().toLowerCase();

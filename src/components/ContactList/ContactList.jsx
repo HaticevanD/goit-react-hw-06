@@ -3,7 +3,6 @@ import css from "./ContactList.module.css";
 
 import Contact from "../Contact/Contact";
 
-// Selector'ları import et (yolunu kendi yapına göre kontrol et)
 import { selectContacts } from "../../redux/contactsSlice";
 import { selectNameFilter } from "../../redux/filtersSlice";
 
